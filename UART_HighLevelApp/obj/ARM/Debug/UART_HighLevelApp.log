@@ -1,0 +1,97 @@
+﻿  In function 'SendWaterDetails':
+main.c(371,16): warning : character constant too long for its type
+main.c(371,16): warning :   SendTelemetry('StartTime', '10');
+main.c(371,16): warning :                 ^~~~~~~~~~~
+main.c(371,29): warning : multi-character character constant [-Wmultichar]
+main.c(371,29): warning :   SendTelemetry('StartTime', '10');
+main.c(371,29): warning :                              ^~~~
+main.c(371,16): warning : passing argument 1 of 'SendTelemetry' makes pointer from integer without a cast [-Wint-conversion]
+main.c(371,16): warning :   SendTelemetry('StartTime', '10');
+main.c(371,16): warning :                 ^~~~~~~~~~~
+main.c(339,48): message : expected 'const unsigned char *' but argument is of type 'int'
+main.c(339,48): message :  static void SendTelemetry(const unsigned char* key, const unsigned char* value)
+main.c(339,48): message :                            ~~~~~~~~~~~~~~~~~~~~~^~~
+main.c(371,29): warning : passing argument 2 of 'SendTelemetry' makes pointer from integer without a cast [-Wint-conversion]
+main.c(371,29): warning :   SendTelemetry('StartTime', '10');
+main.c(371,29): warning :                              ^~~~
+main.c(339,74): message : expected 'const unsigned char *' but argument is of type 'int'
+main.c(339,74): message :  static void SendTelemetry(const unsigned char* key, const unsigned char* value)
+main.c(339,74): message :                                                      ~~~~~~~~~~~~~~~~~~~~~^~~~~
+  In function 'AzureTimerEventHandler':
+main.c(394,17): warning : character constant too long for its type
+main.c(394,17): warning :    SendTelemetry('Temperature', '10');
+main.c(394,17): warning :                  ^~~~~~~~~~~~~
+main.c(394,32): warning : multi-character character constant [-Wmultichar]
+main.c(394,32): warning :    SendTelemetry('Temperature', '10');
+main.c(394,32): warning :                                 ^~~~
+main.c(394,17): warning : passing argument 1 of 'SendTelemetry' makes pointer from integer without a cast [-Wint-conversion]
+main.c(394,17): warning :    SendTelemetry('Temperature', '10');
+main.c(394,17): warning :                  ^~~~~~~~~~~~~
+main.c(339,48): message : expected 'const unsigned char *' but argument is of type 'int'
+main.c(339,48): message :  static void SendTelemetry(const unsigned char* key, const unsigned char* value)
+main.c(339,48): message :                            ~~~~~~~~~~~~~~~~~~~~~^~~
+main.c(394,32): warning : passing argument 2 of 'SendTelemetry' makes pointer from integer without a cast [-Wint-conversion]
+main.c(394,32): warning :    SendTelemetry('Temperature', '10');
+main.c(394,32): warning :                                 ^~~~
+main.c(339,74): message : expected 'const unsigned char *' but argument is of type 'int'
+main.c(339,74): message :  static void SendTelemetry(const unsigned char* key, const unsigned char* value)
+main.c(339,74): message :                                                      ~~~~~~~~~~~~~~~~~~~~~^~~~~
+  At top level:
+main.c(187,13): warning : 'SendMessageCallback' used but never defined
+main.c(187,13): warning :  static void SendMessageCallback(IOTHUB_CLIENT_CONFIRMATION_RESULT result, void* context);
+main.c(187,13): warning :              ^~~~~~~~~~~~~~~~~~~
+main.c(191,13): warning : 'ReportStatusCallback' used but never defined
+main.c(191,13): warning :  static void ReportStatusCallback(int result, void* context);
+main.c(191,13): warning :              ^~~~~~~~~~~~~~~~~~~~
+main.c(192,20): warning : 'GetReasonString' used but never defined
+main.c(192,20): warning :  static const char* GetReasonString(IOTHUB_CLIENT_CONNECTION_STATUS_REASON reason);
+main.c(192,20): warning :                     ^~~~~~~~~~~~~~~
+main.c(413,18): warning : 'azureEventData' defined but not used [-Wunused-variable]
+main.c(413,18): warning :  static EventData azureEventData = { .eventHandler = &AzureTimerEventHandler };
+main.c(413,18): warning :                   ^~~~~~~~~~~~~~
+main.c(368,13): warning : 'SendWaterDetails' defined but not used [-Wunused-function]
+main.c(368,13): warning :  static void SendWaterDetails(char key, int i)
+main.c(368,13): warning :              ^~~~~~~~~~~~~~~~
+main.c(248,13): warning : 'SendUartMessage' defined but not used [-Wunused-function]
+main.c(248,13): warning :  static void SendUartMessage(int uartFd, const char* dataToSend)
+main.c(248,13): warning :              ^~~~~~~~~~~~~~~
+main.c(180,21): warning : 'retryTimeoutSeconds' defined but not used [-Wunused-const-variable=]
+main.c(180,21): warning :  static const size_t retryTimeoutSeconds = 0;
+main.c(180,21): warning :                      ^~~~~~~~~~~~~~~~~~~
+main.c(168,12): warning : 'buttonPollTimerFd' defined but not used [-Wunused-variable]
+main.c(168,12): warning :  static int buttonPollTimerFd = -1;
+main.c(168,12): warning :             ^~~~~~~~~~~~~~~~~
+main.c(160,24): warning : 'buttonState' defined but not used [-Wunused-variable]
+main.c(160,24): warning :  static GPIO_Value_Type buttonState = GPIO_Value_High;
+main.c(160,24): warning :                         ^~~~~~~~~~~
+main.c(54,19): warning : 'connectionString' defined but not used [-Wunused-const-variable=]
+main.c(54,19): warning :  static const char connectionString[] = "HostName=Theshowerheads.azure-devices.net;DeviceId=AFB392A406D085727D64A7BF995514021AFEBEF47C5E783D622CF767B094F2E4D5147FD7FB02CEC91025E42AC85CCDBDB12D31320F6A83B5CC1E27C2466E199E;SharedAccessKey=HoISUn9N15Bfdy6bWek9hQUJKNYx0TORcJ4S64bNWCc=";
+main.c(54,19): warning :                    ^~~~~~~~~~~~~~~~
+  Azure Sphere Utility version 19.5.4.53731
+  Copyright (C) Microsoft Corporation. All rights reserved.
+   
+  Start time (UTC): Sunday, 06 October 2019 21:23:30 
+  verbose: Creating image package. 
+  verbose: Azure Sphere application image package written. 
+  verbose: Appending metadata. 
+  verbose: Wrote metadata:
+    Section: Identity
+      Image Type:           Application
+      Component ID:         4f2d9823-dbbd-4740-a7dd-198c32ba34fe
+      Image ID:             15212293-7766-4623-82b2-85e9215db232
+    Section: Signature
+      Signing Type:         ECDsa256
+      Cert:                 a8d5cc6958f48710140d7a26160fc1cfc31f5df0
+    Section: Debug
+      Image Name:           UART_HighLevelApp
+      Built On (UTC):       10/6/2019 9:23:31 PM
+      Built On (Local):     10/6/2019 2:23:31 PM
+    Section: Temporary Image
+      Remove image at boot: False
+      Under development:    True
+    Section: ABI Depends
+      Depends on:           ApplicationRuntime, version 2
+   
+  verbose: Packaging completed successfully. 
+  verbose: Output file is at: C:\Users\venka\Desktop\WomenWhoCode\azure-sphere-samples-master\azure-sphere-samples-master\Samples\UART\UART_HighLevelApp\UART_HighLevelApp\bin\ARM\Debug\UART_HighLevelApp.imagepackage 
+  Command completed successfully in 00:00:00.7338978. 
