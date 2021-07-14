@@ -1,0 +1,18 @@
+<div class="container-fluid p-0">
+  <app-toasts aria-live="polite" aria-atomic="true"></app-toasts>
+  <ng-template let-context let-modal="modal" #modalTemplate>
+    <div id="error_header" class="header">UH OH!</div>
+    <div id="error_body" class="content errorBody">
+      <p id="error_message">{{ context.data }}</p>
+    </div>
+  </ng-template>
+  <app-header></app-header>
+  <app-nav role="navigation" aria-label="mainNav"></app-nav>
+  <div class="header-break"></div>
+  <div [@routeAnimations]="o.isActivated ? o.activatedRoute : ''">
+    <router-outlet #o="outlet"></router-outlet>
+  </div>
+  <div role="contentinfo">
+    <div class="bg-dark text-success text-center w-100 position-fixed fixed-bottom">&copy; 2020 - Nike<span class="small">{{ version }}</span></div>
+  </div>
+</div>
