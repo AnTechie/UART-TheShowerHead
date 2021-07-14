@@ -1,0 +1,11 @@
+qualityConfig:
+  application:
+    domain: Retail Commerce
+    classification: Bronze
+    owner: Pass Play
+    team: Pass Play
+    name: PassPlay.Admin
+    email: lst-dtc.passplay.engineering
+    costcenter: 105138
+    organization: Retail Commerce
+    source: Azure Pipelines
